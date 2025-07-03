@@ -1,0 +1,292 @@
+/* ========== RESET & BASE STYLES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== HEADER & NAVBAR ========== */
+.header_area {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 10px 0;
+  z-index: 999;
+  position: relative;
+}
+
+.logo_h img {
+  height: 50px;
+}
+
+.menu_nav {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.menu_nav .nav-item {
+  list-style: none;
+}
+
+.menu_nav .nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+  gap: 50px;
+  padding: 10px 15px;
+  text-align: right;
+  transition: all 0.3s ease;
+}
+
+.menu_nav .nav-link:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.nav-item.active .nav-link {
+  color: #007bff;
+  font-weight: bold;
+}
+
+
+/* ========== BANNER SECTION ========== */
+.home_banner_area {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+.banner_inner {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.banner_content {
+  animation: slideRight 1s ease-out;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.banner_content h3,
+.banner_content h1,
+.banner_content h5 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #222;
+}
+
+.primary_btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  margin-right: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.primary_btn:hover {
+  background-color: #0056b3;
+}
+
+.primary_btn.tr-bg {
+  background-color: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.primary_btn.tr-bg:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* ========== ABOUT SECTION ========== */
+.about_area {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.about_img img {
+  border-radius: 10px;
+}
+
+.main_title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.main_title p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* ========== PORTFOLIO SECTION ========== */
+.portfolio_area {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.portfolio_box {
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.portfolio_box:hover {
+  transform: translateY(-10px);
+}
+
+.single_portfolio {
+  position: relative;
+}
+
+.single_portfolio .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 123, 255, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.single_portfolio:hover .overlay {
+  opacity: 1;
+}
+
+.short_info {
+  padding: 15px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.short_info h4 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact_area {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.contact_info .info_item {
+  margin-bottom: 20px;
+}
+
+.contact_info i {
+  font-size: 24px;
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.contact_info h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contact_form .form-control {
+  margin-bottom: 15px;
+  border-radius: 0;
+  border: 1px solid #ccc;
+}
+
+.contact_form textarea {
+  resize: none;
+}
+
+/* ========== FOOTER ========== */
+.footer_area {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer_logo img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.footer_social a {
+  color: #007bff;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer_social a:hover {
+  color: #0056b3;
+}
+
+.footer-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 991.98px) {
+  .menu_nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 15px;
+  }
+
+  .menu_nav .nav-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .menu_nav .nav-link {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+
+  .banner_content,
+  .about_img,
+  .main_title {
+    text-align: center;
+  }
+
+  .primary_btn {
+    display: inline-block;
+    margin: 10px 5px 0;
+  }
+
+  .home_right_img {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
